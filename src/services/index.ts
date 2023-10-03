@@ -1,6 +1,9 @@
 export const getData = async ({ query }: { query: string }) => {
   const res = await fetch(
-    `https://grocery-murex.vercel.app/api/products?search=${query}`
+    `https://grocery-murex.vercel.app/api/products?search=${query}`,
+    {
+      cache: "no-store",
+    }
   );
 
   if (!res.ok) {

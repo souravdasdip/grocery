@@ -1,20 +1,10 @@
+import { getData } from "@/services";
 import { ProductType } from "@/types";
 import ProductCard from "./ProductCard";
 import Search from "./Search";
 
-const getData = async ({ query }: { query: string }) => {
-  const res = await fetch(`http://localhost:3000/api/products?search=${query}`);
-
-  if (!res.ok) {
-    throw new Error("Failed!");
-  }
-
-  return res.json();
-};
-
 const ProductsSection = async ({ search }: { search: string }) => {
   const products: ProductType[] = await getData({ query: search });
-  console.log(products);
 
   return (
     <section

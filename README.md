@@ -1,7 +1,7 @@
 # Grocery app
 
 ## Overview
-This project is using the Nextjs "app" routes for SSR and CSR and "app/api" routes for create API endpoint:
+This project is using the Nextjs "app" routes for SSR and CSR and "app/api" routes for create API endpoint. Database postgreSQL is using from vercel and connected to Prisma ORM.
 
 ### Project layout
 
@@ -22,8 +22,8 @@ This project is using the Nextjs "app" routes for SSR and CSR and "app/api" rout
 ---
 
 ##### Build Project
-
 ```
+$ npx prisma studio
 $ npm run build
 ```
 
@@ -31,7 +31,6 @@ $ npm run build
 ```
 $ docker compose up
 $ npx prisma migrate dev
-$ npx prisma studio
 $ npm run dev
 ```
 

@@ -38,6 +38,7 @@ $ npm run dev
 ---
 
 #### Product Service
+```
 Request Body: {
     "catSlug": "Product category",
     "title": "Product name",
@@ -45,6 +46,7 @@ Request Body: {
     "img": "Product Image",
     "price": "Product price"
 }
+```
 |HTTP Method|URL|Description|
 |---|---|---|
 |`GET`|https://grocery-murex.vercel.app/api/products | GET All Products |
